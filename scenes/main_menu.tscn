@@ -1,0 +1,95 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbwcc8pn213fv"]
+
+[ext_resource type="Theme" uid="uid://dynyhmx2ajvt6" path="res://resources/main_theme.tres" id="1_3660a"]
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="2_myxxs"]
+
+[sub_resource type="Gradient" id="Gradient_i1e0f"]
+interpolation_mode = 2
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1jm2t"]
+gradient = SubResource("Gradient_i1e0f")
+
+[sub_resource type="LabelSettings" id="LabelSettings_rssmo"]
+font_size = 100
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3660a")
+script = ExtResource("2_myxxs")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_1jm2t")
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Menu/VBoxContainer"]
+layout_mode = 2
+text = "GAME TITLE"
+label_settings = SubResource("LabelSettings_rssmo")
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Play"
+language = "en"
+
+[node name="Options" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Options"
+language = "en"
+
+[node name="Credits" type="Button" parent="Menu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Credits"
+language = "en"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Menu/VBoxContainer/Play" to="." method="play"]
+[connection signal="pressed" from="Menu/VBoxContainer/Options" to="." method="show_options"]
+[connection signal="pressed" from="Menu/VBoxContainer/Credits" to="." method="show_credits"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d2c74oenv5yd8"]
+
+[ext_resource type="Script" path="res://singletons/scene_switcher.gd" id="1_feqvd"]
+
+[node name="SceneSwitcher" type="Node"]
+script = ExtResource("1_feqvd")
