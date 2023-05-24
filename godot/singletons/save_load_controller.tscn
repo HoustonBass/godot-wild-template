@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4udoo8dfrstr"]
+
+[ext_resource type="Script" path="res://singletons/save_load_controller.gd" id="1_8tjm8"]
+
+[node name="save_load_controller" type="Node"]
+script = ExtResource("1_8tjm8")

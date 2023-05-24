@@ -23,6 +23,7 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 
 MusicController="*res://singletons/music_controller.tscn"
 SceneSwitcher="*res://singletons/scene_switcher.tscn"
+SaveLoadController="*res://singletons/save_load_controller.gd"
 
 [input]
 

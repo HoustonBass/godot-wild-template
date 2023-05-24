@@ -4,6 +4,7 @@ var cantina_band = load("res://assets/music/cantina-band-lofi.ogg")
 
 func _ready():
 	MusicController.crossfade_to(cantina_band)
+	$AnimationPlayer.play("fadeIn")
 
 func play():
 	SceneSwitcher.handle_scene_change("res://scenes/game.tscn")

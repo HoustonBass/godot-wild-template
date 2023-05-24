@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://co67lqkpvmmsq"]
+
+[ext_resource type="Shader" path="res://resources/materials/materialize.gdshader" id="1_7lcy3"]
+
+[resource]
+shader = ExtResource("1_7lcy3")
+shader_parameter/fragment_number = Vector2(6, 6)
+shader_parameter/dissolve_state = 1.0
